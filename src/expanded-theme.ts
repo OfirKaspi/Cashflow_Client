@@ -1,11 +1,12 @@
-import { Palette as MuiPalette, PaletteColor as MuiPaletteColor } from "@mui/material/styles/createPalette";
+// eslint-disable-next-line
+import { Palette, PaletteColor } from "@mui/material/styles/createPalette";
 
 declare module "@mui/material/styles/createPalette" {
-    interface CustomPaletteColor extends MuiPaletteColor {
+    interface PaletteColor {
         [key: number]: string;
     }
 
-    interface Palette extends MuiPalette {
-        tertiary: CustomPaletteColor;
+    interface Palette {
+        tertiary: PaletteColor;
     }
 }
